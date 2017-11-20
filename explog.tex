@@ -234,7 +234,7 @@ Gaf logaritemske funkcije dobimo tako, da čez simetralo lihih kvadrantov $y=x$ 
 \clip(-5.907272727272731,-5.101818181818178) rectangle (8.412727272727277,5.698181818181817);
 \draw[line width=2.pt,dash pattern=on 5pt off 5pt,color=aqaqaq,smooth,samples=100,domain=-5.907272727272731:8.412727272727277] plot(\x,{2.0^((\x))});
 \draw [line width=2.pt,dash pattern=on 5pt off 5pt,color=aqaqaq,domain=-5.907272727272731:8.412727272727277] plot(\x,{(-0.--1.*\x)/1.});
-\draw[line width=2.pt,color=ccqqqq,smooth,samples=1000,domain=0.01:100] plot(\x,{log2(\x)});
+\draw[line width=2.pt,color=ccqqqq,smooth,samples=4001,domain=0.01:100] plot(\x,{log2(\x)});
 \draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-5.101818181818178) -- (0.,5.698181818181817);
 \draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-1.)-- (0.4927272727272728,-1.0211387670581502)-- (0.4927272727272728,0.);
 \draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,1.)-- (2.,1.)-- (2.,0.);
@@ -287,7 +287,7 @@ Gaf logaritemske funkcije dobimo tako, da čez simetralo lihih kvadrantov $y=x$ 
 \draw[line width=2.pt,dash pattern=on 4pt off 4pt,color=aqaqaq,smooth,samples=100,domain=-5.006149047230808:7.034935859421989] plot(\x,{(1.0/2.0)^((\x))});
 \draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-4.164698738644652) -- (0.,5.336995356688894);
 \draw [line width=2.pt,dash pattern=on 4pt off 4pt,color=aqaqaq,domain=-5.006149047230808:7.034935859421989] plot(\x,{(-0.--1.*\x)/1.});
-\draw[line width=2.pt,color=qqwuqq,smooth,samples=1000,domain=0.01:100] plot(\x,{ln((\x))/ln(0.5)});
+\draw[line width=2.pt,color=qqwuqq,smooth,samples=4001,domain=0.01:100] plot(\x,{ln((\x))/ln(0.5)});
 \draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,1.)-- (0.4996206865294056,1.0010948826822181)-- (0.5098786753699146,0.);
 \draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-1.)-- (2.000001852694624,-1.0000013364360543)-- (2.,0.);
 \begin{scriptsize}
@@ -434,7 +434,7 @@ Logaritemske enačbe in neenačbe rešujemo s pravili za logaritmiranje.
 \end{vaja}
 
 \begin{vaja}
-	Kateri x-i zadoščajo enačbi \(-7*3^x+9^x=-12\).
+	Kateri x-i zadoščajo enačbi \(-7\cdot 3^x+9^x=-12\).
   \begin{odgovor}
    	Enačbo najprej prepišemo v tako obliko, da bodo v osnovi eksponenta praštevila in poskusimo:
 	\begin{align*}
@@ -458,11 +458,22 @@ Logaritemske enačbe in neenačbe rešujemo s pravili za logaritmiranje.
 \end{vaja}
 
 \begin{vaja}
+Določi interval, kjer bo $e^x < 16$.
+  \begin{odgovor}
+   Najprej enačbo logaritmiramo z $\ln$ in dobimo:
+\begin{align*}
+\ln{e^x}&< \ln 16 \\
+x &< \ln 16
+\end{align*}
+  \end{odgovor}
+\end{vaja}
+
+
+\begin{vaja}
   \begin{odgovor}
    
   \end{odgovor}
 \end{vaja}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Treba je zapredi datoteko z odgovori
 
