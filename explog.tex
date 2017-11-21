@@ -127,7 +127,7 @@ $x, z \in \mathbb{R}, a, b > 0, a, b \neq 1$:
 \begin{itemize}
 \item $a^x \cdot a^z = a^{x + z}$
 \item $a^x : a^z = a^{x - z}$
-\item $(a^x)^z$
+\item $(a^x)^z = a^{x\cdot z}$
 \item $a^x \cdot b^x = (a \cdot b)^x$
 \item $\frac{a^x}{b^x} = (\frac{a}{b})^x$
 \item $a^{-x} = \frac{1}{a^x}$
@@ -142,11 +142,36 @@ Eksponentne enačbe ločimo v pet skupin:
 %
 \begin{enumerate}
 \item \textbf{osnovi potenc na obeh straneh enačbe sta enaki} oz. enačbo preuredimo tako, da imamo na obeh straneh enaki osnovi: $a^{f(x)} = a^{g(x)}$. Enačaj bo veljal le, če bosta eksponenta enaka: $f(x) = g(x)$.
+%
+\begin{zgled}
+Reši enačbo: $2^{x+3} = 4^{3x+1}$.
+\begin{align*}
+\intertext{Najprej enačbo preuredimo, da bomo imeli na obeh straneh enaki osnovo:}
+2^{x+3} &= (2^2)^{3x-1}\\
+\intertext{Uporabimo pravilo $(a^x)^z = a^{x\cdot z}$:}\\
+2^{x+3} &= (2)^{6x-2}
+\intertext{Eksponenta morata biti enaka, da bo leva stran enačbe enaka desni:}
+x+3 &= 6x-2
+\intertext{Ven izračunamo $x$:}
+x&=1
+\end{align*}
+\end{zgled}
+%
 \item \textbf{potenci imata različni osnovi, vendar enak eksponent:} $a^{f(x)} =b^{f(x)}$. Enačaj bo v tem primeru veljal le, če bosta eksponenta enaka nič, saj grafa eksponentne funkcije z različnima osnovama potekata skozi eno skupno točko in sicer $T(0, 1) \Rightarrow f(x) = 0$ (glej \ref{fig: grafa}) ali:
 %
 \begin{equation*}
 \bigg(\frac{a}{b}\bigg)^{f(x)}=1 \Rightarrow \bigg(\frac{a}{b}\bigg)^{f(x)} = \bigg(\frac{a}{b}\bigg)^0 \text{po zgornji točki}\Rightarrow f(x) = 0.
 \end{equation*}
+\\
+\begin{zgled}
+Reši enačbo: $5^{x-1} = 4^{x-1}$.
+\begin{align*}
+\intertext{Enačaj bo veljal le v primeru, ko bo eksponent enak 0:}
+x-1&=0
+\intertext{Izrazimo $x$:}
+x&=1
+\end{align*}
+\end{zgled}
 %
 \begin{figure}[h]
 \centering
@@ -173,8 +198,39 @@ Eksponentne enačbe ločimo v pet skupin:
 \end{figure}
 
 \item \textbf{neznanka v eksponentu potence je pomnožena z različnimi koeficienti:} $a^{bx + c}$. Enačbo poenostaviš tako, da vpelješ novo spremenljivko $u$, kjer bo eksponent najmanjši faktor ter računaš naprej kvadratno enačbo z $u$-ji.
+%
+\begin{zgled}
+Reši enačbo: $2^x+2^{2x-1=4}.$
+\begin{align*}
+\intertext{Uporabimo pravilo $a^x \cdot a^z = a^{x + z}$:}
+2^x+2^{2x}\cdot 2^{-1}&=4
+\intertext{Vpeljemo novo spremenljivko u, za katero vzamemo najmanjši faktor: $u=2^x$ ter zapišemo prenovljeno enačbo:}
+u+u^2\cdot\frac{1}{2}&=4
+\intertext{Množimo z 2, da se znebimo ulomka in dobimo kvadratno enačbo:}
+u^2+2u-8&=0
+\intertext{Razcepimo po Vietovem pravilu:}
+(u-2)(u+4)&=0
+\intertext{Dobimo dve rešitvi: $u_1=2$ in $u_2=-4$ ter pogledamo kaj je bil u. V prvem primeru dobimo $2=2^x \Rightarrow x=1$, v drugem pa $-4=2^x$, kar pa ne more biti enako, saj je 2 na neko potenco vedno pozitivno število.}
+\end{align*}
+\end{zgled}
 \item \textbf{enačbe, kjer nastopajo eksponentne in neeksponentne funkcije:} $a^{f(x)} = b$, kjer $b$ ni potenca števila $a$ ali $a^{f(x)} = x + c$. V takem primeru najprej narišemo grafa obeh funkcij, ki ju vsebuje enačba. Z grafa prebereš rešitve. 
 \item \textbf{enačbe, kjer nastopajo vsote ali razlike potenc z enakimi osnovami} rešujemo  z izpostavljanjem skupnega faktorja. Tako enačbo prevedemo na že znane eksponntne enačbe.
+%
+\begin{zgled}
+Reši enačbo: $2^{x-4}+3 \cdot 2^{x-2} - 2^{x-1} = 20$.
+\begin{align*}
+\intertext{Izpostavimo najmanjši skupni faktor:}
+2^{x-4}(1+3\cdot2^2-2^3)&=20
+\intertext{Poračunamo oklepaj:}
+2^{x-4}\cdot5 &= 20
+\intertext{Delimo s 5:}
+2^{x-4}&=4
+\intertext{Preoblikujemo, da bomo imeli na obeh straneh enako osnovo:}
+2^{x-4}&=2^2
+\intertext{Enačimo eksponente in dobimo:}
+x-4&=2 \Rightarrow x=6
+\end{align*}
+\end{zgled}
 \end{enumerate}
 
 \begin{center}
