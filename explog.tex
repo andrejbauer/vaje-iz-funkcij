@@ -214,6 +214,39 @@ u^2+2u-8&=0
 \end{align*}
 \end{zgled}
 \item \textbf{enačbe, kjer nastopajo eksponentne in neeksponentne funkcije:} $a^{f(x)} = b$, kjer $b$ ni potenca števila $a$ ali $a^{f(x)} = x + c$. V takem primeru najprej narišemo grafa obeh funkcij, ki ju vsebuje enačba. Z grafa prebereš rešitve. 
+%
+\begin{zgled}
+Reši enačbo: $3^x=1-x$.\\
+Narišemo grafa funkcij $f(x)=3^x$ in $g(x)=1-x$ in pogledamo kje se sekata, saj imata v presečišču oba grafa enako vrednost.
+%
+\begin{figure}[h]
+\centering
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=0.6]
+\draw[->,color=black] (-5.962049588774973,0.) -- (7.514070837014174,0.);
+\foreach \x in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-2.9464833868943394) -- (0.,7.6876060552437275);
+\foreach \y in {-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-5.962049588774973,-2.9464833868943394) rectangle (7.514070837014174,7.6876060552437275);
+\draw[line width=2.pt,color=qqwuqq,smooth,samples=100,domain=-6.394698325375187:4.496895020831907] plot(\x,{3.0^((\x))});
+\draw[line width=2.pt,color=ccqqqq,smooth,samples=100,domain=-5.962049588774973:7.514070837014174] plot(\x,{1.0-(\x)});
+\begin{scriptsize}
+\draw[color=qqwuqq] (-4.36223082314358,0.2813862402325262) node {$f$};
+\draw[color=ccqqqq] (-4.983336932153415,5.476091879223865) node {$g$};
+\draw [fill=uuuuuu] (3.2449442555913735E-9,0.9999999967550558) circle (2.0pt);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Grafično reševanje enačb}
+\end{figure}
+%
+Neodvisna spremenljivka $x$ v presečišču je kandidat za rešitev. V našem primeru: $x=0$. Preverimo ali je $x=0$ res rešitev in sicer tako, da ga vstavimo nazaj v obe strani enačbe in dobimo: $3^0=1$ in $1-0=1 \Rightarrow$ rešitev je $x=0$.
+\end{zgled}
+%
 \item \textbf{enačbe, kjer nastopajo vsote ali razlike potenc z enakimi osnovami} rešujemo  z izpostavljanjem skupnega faktorja. Tako enačbo prevedemo na že znane eksponntne enačbe.
 %
 \begin{zgled}
