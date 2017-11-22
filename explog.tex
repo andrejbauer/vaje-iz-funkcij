@@ -358,7 +358,7 @@ x&<-2
 LOGARITEMSKA FUNKCIJA
 \end{center}
 
-Ker je eksponentna funkcija  $f: x \mapsto a^x$ bijektivna, je obrnljiva, kar pa pomeni, da ima inverz $f^{-1}$. Njena inverzna funkcija je logaritemska funkcija z enako osnovo. Logaritemska funkcija z osnovo $a$, kjer je $a > 0$ in $a \neq 1$ je preslikava $f: x \mapsto \log_a{x}$, za vse $x > 0$. Torej velja:
+Ker je eksponentna funkcija  $f: x \mapsto a^x$ bijektivna, je obrnljiva, kar pa pomeni, da ima inverz $f^{-1}$. Njena inverzna funkcija je logaritemska funkcija z enako osnovo. Logaritemska funkcija z osnovo $a$, kjer je $a > 0$ in $a \neq 1$ je preslikava $f: x \mapsto \log_a{x}$, za vse $x > 0$, pri čemer je $x$ argument logaritma. Torej velja:
 \begin{equation*}
 a^x=y \Leftrightarrow x=\log_a{y}
 \end{equation*}
@@ -421,6 +421,7 @@ Gaf logaritemske funkcije dobimo tako, da čez simetralo lihih kvadrantov $y=x$ 
 \end{scriptsize}
 \end{tikzpicture}
 \caption{Graf logaritma $a>1$}
+\label{fig: graf osnove več od 1}
 \end{figure}
 \end{itemize}
 
@@ -476,6 +477,29 @@ Gaf logaritemske funkcije dobimo tako, da čez simetralo lihih kvadrantov $y=x$ 
 \end{itemize}
 \end{enumerate}
 
+\begin{zgled}
+Nariši graf funkcije: $f(x) = \log_2{(2x-3)}+1$.
+\begin{align*}
+\intertext{Tako kot pri eksponentni funkciji najprej določimo osnovno funkcijo. Osnovna funkcija bo sedaj vsebovala le logaritem brez premikov po $y$-osi in brez zrcaljenja: $y' = \log_2{(2x-3)}$. Nato funkcijo $y'$ narišemo v treh korakih:}
+\intertext{1) Poiščemo definicijsko območje tako, da upoštevamo pogoj: argument je večji od 0. Torej:}
+2x-3&>0
+\intertext{Iz tega sledi:}
+x&>\frac{3}{2}
+\intertext{Narišemo navpično asimptoto pri $x=\frac{3}{2}$. Ker smo izračunali, da je ta logaritem definiran le za tiste $x$, ki so večji od $\frac{3}{2}$, bo naš graf na desni strani narisane asimptote.} 
+\intertext{2) Poiščemo ničlo. Logaritemske funkcije imajo ničlo, ko je argument enak 1. Torej:}
+2x-3=1 \Rightarrow x=2
+\intertext{Narišemo ničlo.}
+\intertext{3) Izračunamo točko, kjer ima logaritem vrednost 1. To bo takrat, ko bo argument enak osnovi logaritma:}
+2x-3 = 2 \Rightarrow x=\frac{5}{2}
+\intertext{Narišemo torej točko $T(\frac{5}{2}, 1)$. Čez dobljeni točki narišemo graf logaritemske funkcije. Tako smo dobili graf $y'$. Graf $y'$ je potrebno še premakniti v smeri $y$-osi. Logaritmu je prišteta enka, zato narisan graf prestavimo za eno enoto v desno (če bi enko odšteli, bi s prestavili za eno enoto v levo) in dobimo željeno funkcijo $f(x)$.}
+\end{align*}
+\begin{figure}[hb]
+\centering
+\includegraphics[width=11cm]{zgled_logaritem.pdf}
+\end{figure}
+%
+\end{zgled}
+
 \newpage
 Za računanje z logaritmi velja nekaj pravil:
 \begin{multicols}{2}
@@ -499,7 +523,30 @@ V matematiki največ uporabljamo logaritma z osnovo 10, ki mu pravimo desetiški
 \end{equation*}
 
 Logaritemske enačbe in neenačbe rešujemo s pravili za logaritmiranje.
+\\
+\begin{zgled}
+Reši logaritemsko neenačbo: $\log_2{( \frac{x^2}{3}-\frac{x}{3}-2)}\geq 0$
+\begin{align*}
+\intertext{Če pogledamo graf logaritemske funkcije, ko je osnova večja od 1 (glej \ref{fig: graf osnove več od 1}), vidimo, da je funkcija pozitivna, ko je argument večji ali enak 1. Torej:}
+\frac{x^2}{3}-\frac{x}{3}-2 &\geq 1
+\intertext{Pomnožimo s 3, da se znebimo ulomkov, malo preuredimo in dobimo kvadratno enačbo:}
+x^2 - x - 9 &\geq 0
+\intertext{Izračunamo ničle:}
+x_{1,2} &= \frac{1\pm \sqrt{37}}{2}
+\intertext{Pogledamo, kje kvadratna funkcija pozitivna in dobimo rešitev:}
+\mathcal{D}_f &= \Bigg(-\infty,\frac{1- \sqrt{37}}{2}\Bigg) \bigcup \Bigg(\frac{1+ \sqrt{37}}{2}, \infty\Bigg)
+\end{align*}
+\end{zgled}
 
+\begin{zgled}
+Reši logaritemsko enačbo: $\log_4{(5x+2)}=2$.
+\begin{align*}
+\intertext{Uporabimo definicijo logaritma: $a^x=y \Leftrightarrow x=\log_a{y}$ in dobimo:}
+5x +2 &= 4^2
+\intertext{Izračunamo ven $x$:}
+x&=\frac{14}{5}
+\end{align*}
+\end{zgled}
 
 \section{Vaje}
 \label{sec:exp-log-vaje}
