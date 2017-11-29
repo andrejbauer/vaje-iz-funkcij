@@ -24,63 +24,24 @@ Eksponentna funkcija je preslikava $f: \mathbb{R} \longrightarrow \mathbb{R}^+$ 
 \item Začetna vrednost je pri vseh grafih enaka: $T(0,1)$, saj je $f(0) = a^0 = 1~\forall a$.
 \item Funkcija je naraščajoča: $x_1 < x_2 \Rightarrow f(x_1) < f(x_2)$
 \item Funkcija je injektivna: $x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)~\forall x_{1, 2} \in \mathbb{R}$.
-%
-\begin{figure}[h]
-\centering
-\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
-\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
-\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.9]
-\draw[->,color=black] (-3.4954873277047307,0.) -- (4.196120979865234,0.);
-\foreach \x in {-3.,-2.,-1.,1.,2.,3.,4.}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-\draw[->,color=black] (0.,-1.237832632360699) -- (0.,4.56310100742669);
-\foreach \y in {-1.,1.,2.,3.,4.}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-\clip(-3.4954873277047307,-1.237832632360699) rectangle (4.196120979865234,4.56310100742669);
-\draw[line width=2.pt,color=ccqqqq,smooth,samples=100,domain=-3.4954873277047307:4.196120979865234] plot(\x,{2.0^((\x))});
-\draw [line width=1.2pt,dash pattern=on 1pt off 1pt,color=aqaqaq,domain=-3.4954873277047307:4.196120979865234] plot(\x,{(-0.-0.*\x)/1.});
-\draw [line width=1.2pt,dash pattern=on 1pt off 1pt,color=aqaqaq] (1.,0.)-- (1.,2.)-- (0.,2.);
-\draw [line width=1.2pt,dash pattern=on 1pt off 1pt,color=aqaqaq] (-1.,0.)-- (-1.,0.5)-- (0.,0.5);
-\begin{scriptsize}
-\draw [fill=qqwuqq] (0.,1.) circle (2.0pt);
-\draw[color=qqwuqq] (-0.498338280481239,1.1631093463290814) node {$T = (0, 1)$};
-\draw[color=aqaqaq] (-2.4427252967803503,-0.30860900302438576) node {$asimptota$};
-\draw [color=black] (1.,0.) circle (1.0pt);
-\draw[color=black] (0.9733800688722319,-0.14747195747473607) node {1};
-\draw [color=zzttqq] (1.,2.) circle (1.0pt);
-\draw [color=black] (0.,2.) circle (1.0pt);
-\draw[color=black] (-0.2082915984918688,2.0547343317038096) node {a};
-\draw [color=black] (0.,0.) circle (1.0pt);
-\draw[color=black] (-0.09012443175545873,-0.1367294877714261) node {0};
-\draw [color=black] (-1.,0.) circle (1.0pt);
-\draw[color=black] (-1.0462042353500494,-0.14747195747473607) node {-1};
-\draw [color=zzttqq] (-1.,0.5) circle (1.0pt);
-\draw [color=black] (0.,0.5) circle (1.0pt);
-\draw[color=black] (0.2966044775637015,0.46484881561393276) node {1/a};
-\end{scriptsize}
-\end{tikzpicture}
-\caption{Graf, ko $a>1$}
-\end{figure}
-\end{itemize}
+
 %
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[>=latex]
+\begin{tikzpicture}[>=latex, scale=0.7]
 \koordinate{-5}{5}{-5}{5}
 \foreach \x in {-4,...,-1,1,2,...,4}
 \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
 \foreach \y in {-4,...,-1,1,2,...,4}
 \draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-\draw[line width=2.pt,color=blue,smooth,samples=20,domain=-5:2.4] plot(\x,{2.0^((\x))});
+\draw[line width=2.pt,color=blue,smooth,samples=20,domain=-5:2.3] plot(\x,{2.0^((\x))});
 \draw [line width=1.pt,dash pattern=on 1pt off 1pt,color=gray,domain=-5:5] plot(\x,{(-0.-0.*\x)/1.});
 \draw[color=blue] (0,1) circle (1.5pt) node[right]{$T = (0, 1)$};
 \draw[color=gray] (4,0.25) node {$asimptota$};
 \end{tikzpicture}
 \caption{Graf, ko $a>1$}
 \end{figure}
-
+\end{itemize}
 %
 \newpage
 \item $0 < a < 1$:
@@ -92,83 +53,49 @@ Eksponentna funkcija je preslikava $f: \mathbb{R} \longrightarrow \mathbb{R}^+$ 
 \item Funkcija je padajoča: $x_1 < x_2 \Rightarrow f(x_1) > f(x_2)$
 \item Funkcija je injektivna.
 %
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
-\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
-\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
-\definecolor{qqzzqq}{rgb}{0.,0.6,0.}
-\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
-\draw[->,color=black] (-3.4398882747503903,0.) -- (4.784334733686732,0.);
-\foreach \x in {-3.,-2.,-1.,1.,2.,3.,4.}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-\draw[->,color=black] (0.,-1.7465646767819383) -- (0.,4.743220239093709);
-\foreach \y in {-1.,1.,2.,3.,4.}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-\clip(-3.4398882747503903,-1.7465646767819383) rectangle (4.784334733686732,4.743220239093709);
-\draw[line width=2.pt,color=ccqqqq,smooth,samples=100,domain=-3.4398882747503903:4.784334733686732] plot(\x,{(1.0/2.0)^((\x))});
-\draw [line width=1.2pt,dash pattern=on 1pt off 1pt,color=aqaqaq] (1.,0.)-- (1.,0.5)-- (0.,0.5);
-\draw [line width=1.2pt,dash pattern=on 1pt off 1pt,color=aqaqaq] (-1.,0.)-- (-1.,2.)-- (0.,2.);
-\draw [line width=1.2pt,dash pattern=on 1pt off 1pt,color=aqaqaq,domain=-3.4398882747503903:4.784334733686732] plot(\x,{(-0.-0.*\x)/1.});
-\begin{scriptsize}
-\draw [fill=qqzzqq] (0.,1.) circle (2.0pt);
-\draw[color=qqzzqq] (0.4310099848073055,1.1422510866565136) node {T(0,1)};
-\draw [color=black] (0.,0.) circle (1.0pt);
-\draw[color=black] (-0.1203345744175295,-0.17867858648631718) node {0};
-\draw [color=black] (1.,0.) circle (1.0pt);
-\draw[color=black] (0.9593818540644391,-0.19016493147016789) node {1};
-\draw [fill=zzttqq] (1.,0.5) circle (1.0pt);
-\draw [color=black] (0.,0.5) circle (1.0pt);
-\draw[color=black] (-0.2351980242560368,0.5679338374639785) node {a};
-\draw [color=black] (-1.,0.) circle (1.0pt);
-\draw[color=black] (-1.0392421731255876,-0.2016512764540186) node {-1};
-\draw [fill=zzttqq] (-1.,2.) circle (1.0pt);
-\draw [color=black] (0.,2.) circle (1.0pt);
-\draw[color=black] (0.2931738450010968,2.015213305429167) node {1/a};
-\draw[color=aqaqaq] (-2.1534176365591087,0.17739810801305458) node {asimptota};
-\end{scriptsize}
+\begin{tikzpicture}[>=latex, scale=0.7]
+\koordinate{-5}{5}{-5}{5}
+\foreach \x in {-4,...,-1,1,2,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\foreach \y in {-4,...,-1,1,2,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[line width=2.pt,color=blue,smooth,samples=50,domain=-2.3:5] plot(\x,{0.5^((\x))});
+\draw [line width=1.pt,dash pattern=on 1pt off 1pt,color=gray,domain=-5:5] plot(\x,{(-0.-0.*\x)/1.});
+\draw[color=blue] (0,1) circle (1.5pt) node[right]{$T = (0, 1)$};
+\draw[color=gray] (-4,0.25) node {$asimptota$};
 \end{tikzpicture}
 \caption{Graf, ko $0<a<1$}
 \end{figure}
 \end{itemize}
 \end{enumerate}
-
+%
+\newpage
 \begin{zgled}
 Nariši graf: $f(x) = 2^{x+1} - 3$. \\
 Splošna enačba eksponetnih funkcij je: $f(x) = a^{x-p} + q$, kjer je $\vec{r}=(p, q)$ vektor premika. Koordinata $p$ bo premikala v smeri $x$-osi, $q$ pa v smeri $y$-osi. Najprej določimo osnovno eksponentno funkcijo brez premikov, ki jo bomo označili $y'=2^x$ ter vektor premika, ki je v našem primeru $\vec{r}=(-1, -3)$. Paziti moramo na predznak pri $p$, saj je v vektorju zapisan s pozitivnim predznakom, v splošni enačbi pa z negativnim predznakom. Najprej narišemo funkcijo $y'$. Narišemo jo tako, da izračunamo dve ali tri točke z grafa. Pri $x=0$ imamo vrednost 1 (svetlo zelena točka), pri $x=1$ pa vrednost 2 (siva točka). Sedaj imamo graf $y'$. Nato graf premaknemo za vektor $\vec{r}$. Ker ima prva komponenta $p$ vrednost -1, premaknemo graf za eno enoto levo (če bi imeli plus, bi se premaknili v desno) v smeri $x$-osi. Druga komponenta, komponenta $q$, pa ima vrednost -3, zato graf premaknemo v levo (če bi imeli plus, bi se premaknili v desno) za tri enote v smeri $y$-osi. Dobimo graf iskane funkcije $f(x)$.
 %
-\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
-\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
-\definecolor{yqyqyq}{rgb}{0.5019607843137255,0.5019607843137255,0.5019607843137255}
-\definecolor{qqccqq}{rgb}{0.,0.8,0.}
-\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.6]
-\draw[->,color=black] (-9.41461886825452,0.) -- (6.3757608150673954,0.);
-\foreach \x in {-8.,-6.,-4.,-2.,2.,4.,6.}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-\draw[->,color=black] (0.,-4.083843134036176) -- (0.,8.092541199229634);
-\foreach \y in {-4.,-2.,2.,4.,6.,8.}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-\clip(-9.41461886825452,-4.083843134036176) rectangle (6.3757608150673954,8.092541199229634);
-\draw[line width=2.pt,color=qqwuqq,smooth,samples=100,domain=-9.41461886825452:6.3757608150673954] plot(\x,{2.0^((\x))});
-\draw[line width=2.pt,color=ccqqqq,smooth,samples=100,domain=-9.41461886825452:6.3757608150673954] plot(\x,{2.0^((\x)+1.0)-3.0});
-\draw [line width=1.2pt,dash pattern=on 3pt off 3pt,color=qqccqq] (0.,1.)-- (-1.,1.)-- (-1.,-2.);
-\draw [line width=2.pt,dash pattern=on 3pt off 3pt,color=aqaqaq] (1.,2.)-- (0.,2.)-- (0.,-1.);
-\draw [line width=1.2pt,dash pattern=on 3pt off 3pt,color=yqyqyq,domain=-9.41461886825452:6.3757608150673954] plot(\x,{(-3.-0.*\x)/1.});
-\begin{scriptsize}
-\draw[color=qqwuqq] (-7.023821944371272,0.5726508746899044) node {y'};
-\draw [fill=qqccqq] (0.,1.) circle (2.0pt);
-\draw [fill=yqyqyq] (1.,2.) circle (2.0pt);
-\draw[color=ccqqqq] (-7.135021801296074,-2.401945298048547) node {f(x)};
-\draw [fill=qqccqq] (-1.,-2.) circle (2.0pt);
-\draw [fill=yqyqyq] (0.,-1.) circle (2.0pt);
-\draw[color=yqyqyq] (-6.690222373596865,-3.2915441534469623) node {$y = -3$};
-\end{scriptsize}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=latex, scale=0.7]
+\koordinate{-5}{5}{-5}{5}
+\foreach \x in {-4,...,-1,1,2,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\foreach \y in {-4,...,-1,1,2,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[line width=2.pt,color=blue,smooth,samples=20,domain=-5:2.3] plot(\x,{2.0^((\x))});
+\draw [line width=1.pt,dash pattern=on 1pt off 1pt,color=gray,domain=-5:5] plot(\x,{(-3.-0.*\x)/1.});
+\draw[line width=2.pt,color=red,smooth,samples=20,domain=-5:2] plot(\x,{2.0^((\x)+1.0)-3.0});
+\draw[color=blue] (-4, 0.2) node[above]{$y'$};
+\draw[color=red] (-4, -3.25) node[right]{$f(x)$};
+\draw[color=gray] (4,-3.25) node {$y=-3$};
 \end{tikzpicture}
+\end{figure}
 %
 \end{zgled}
 
+\newpage
 \begin{center}
 EKSPONENTNE ENAČBE
 \end{center}
@@ -215,6 +142,22 @@ x&=1
 \begin{equation*}
 \bigg(\frac{a}{b}\bigg)^{f(x)}=1 \Rightarrow \bigg(\frac{a}{b}\bigg)^{f(x)} = \bigg(\frac{a}{b}\bigg)^0 \text{po zgornji točki}\Rightarrow f(x) = 0.
 \end{equation*}
+%
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=latex, scale=0.7]
+\koordinate{-5}{5}{-5}{5}
+\foreach \x in {-4,...,-1,1,2,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\foreach \y in {-4,...,-1,1,2,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[line width=2.pt,color=blue,smooth,samples=20,domain=-5:2.3] plot(\x,{2.0^((\x))});
+\draw[line width=2.pt,color=red,smooth,samples=50,domain=-2.3:5] plot(\x,{0.5^((\x))});
+\draw[color=blue] (0,1) circle (1.5pt) node[right]{$T = (0, 1)$};
+\end{tikzpicture}
+\caption{Grafa dveh eksponentnih funkcij}
+\label{fig: grafa}
+\end{figure}
 \\
 \begin{zgled}
 Reši enačbo: $5^{x-1} = 4^{x-1}$.
@@ -226,30 +169,6 @@ x&=1
 \end{align*}
 \end{zgled}
 %
-\begin{figure}[h]
-\centering
-\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
-\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
-\draw[->,color=black] (-4.394698325375187,0.) -- (4.496895020831907,0.);
-\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-\draw[->,color=black] (0.,-1.4455497947855014) -- (0.,5.570861155782946);
-\foreach \y in {-1.,1.,2.,3.,4.,5.}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-\clip(-4.394698325375187,-1.4455497947855014) rectangle (4.496895020831907,5.570861155782946);
-\draw[line width=2.pt,color=qqwuqq,smooth,samples=100,domain=-4.394698325375187:4.496895020831907] plot(\x,{2.0^((\x))});
-\draw[line width=2.pt,color=ccqqqq,smooth,samples=100,domain=-4.394698325375187:4.496895020831907] plot(\x,{(1.0/2.0)^((\x))});
-\begin{scriptsize}
-\draw [fill=black] (0.,1.) circle (2.0pt);
-\draw[color=black] (0.6223459649427827,1.0567631371428918) node {T(0,1)};
-\end{scriptsize}
-\end{tikzpicture}
-\caption{Grafa dveh eksponentnih funkcij}
-\label{fig: grafa}
-\end{figure}
-
 \item \textbf{neznanka v eksponentu potence je pomnožena z različnimi koeficienti:} $a^{bx + c}$. Enačbo poenostaviš tako, da vpelješ novo spremenljivko $u$, kjer bo eksponent najmanjši faktor ter računaš naprej kvadratno enačbo z $u$-ji.
 %
 \begin{zgled}
@@ -266,33 +185,25 @@ u^2+2u-8&=0
 \intertext{Dobimo dve rešitvi: $u_1=2$ in $u_2=-4$ ter pogledamo kaj je bil u. V prvem primeru dobimo $2=2^x \Rightarrow x=1$, v drugem pa $-4=2^x$, kar pa ne more biti enako, saj je 2 na neko potenco vedno pozitivno število.}
 \end{align*}
 \end{zgled}
+%
 \item \textbf{enačbe, kjer nastopajo eksponentne in neeksponentne funkcije:} $a^{f(x)} = b$, kjer $b$ ni potenca števila $a$ ali $a^{f(x)} = x + c$. V takem primeru najprej narišemo grafa obeh funkcij, ki ju vsebuje enačba. Z grafa prebereš rešitve. 
 %
 \begin{zgled}
 Reši enačbo: $3^x=1-x$.\\
 Narišemo grafa funkcij $f(x)=3^x$ in $g(x)=1-x$ in pogledamo kje se sekata, saj imata v presečišču oba grafa enako vrednost.
 %
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
-\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
-\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=0.6]
-\draw[->,color=black] (-5.962049588774973,0.) -- (7.514070837014174,0.);
-\foreach \x in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-\draw[->,color=black] (0.,-2.9464833868943394) -- (0.,7.6876060552437275);
-\foreach \y in {-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-\clip(-5.962049588774973,-2.9464833868943394) rectangle (7.514070837014174,7.6876060552437275);
-\draw[line width=2.pt,color=qqwuqq,smooth,samples=100,domain=-6.394698325375187:4.496895020831907] plot(\x,{3.0^((\x))});
-\draw[line width=2.pt,color=ccqqqq,smooth,samples=100,domain=-5.962049588774973:7.514070837014174] plot(\x,{1.0-(\x)});
-\begin{scriptsize}
-\draw[color=qqwuqq] (-4.36223082314358,0.2813862402325262) node {$f$};
-\draw[color=ccqqqq] (-4.983336932153415,5.476091879223865) node {$g$};
-\draw [fill=uuuuuu] (3.2449442555913735E-9,0.9999999967550558) circle (2.0pt);
-\end{scriptsize}
+\begin{tikzpicture}[>=latex, scale=0.7]
+\koordinate{-5}{5}{-5}{5}
+\foreach \x in {-4,...,-1,1,2,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\foreach \y in {-4,...,-1,1,2,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[line width=2.pt,color=blue,smooth,samples=20,domain=-5:1.5] plot(\x,{3.0^((\x))});
+\draw[line width=2.pt,color=red,smooth,samples=50,domain=-3.7:5] plot(\x,{1.0-(\x)});
+\draw[color=blue] (-4.36223082314358,0.2813862402325262) node {$f$};
+\draw[color=red] (-4,4) node[right] {$g$};
 \end{tikzpicture}
 \caption{Grafično reševanje enačb}
 \end{figure}
@@ -399,43 +310,20 @@ Gaf logaritemske funkcije dobimo tako, da čez simetralo lihih kvadrantov $y=x$ 
 \item Funkcija je neomejena: ko vrednosti spremenljivke $x$ naraščajo od $-\infty$ do $+\infty$, graf funkcije narašča od minus neskončno do neskončnosti, zato funkcija navzdol in navzgor ni omejena.
 \item Funkcija je pozitivna na intervalu $(1, \infty)$ in negativna na $(0, 1)$.
 %
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
-\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
-\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.7]
-\draw[->,color=black] (-5.907272727272731,0.) -- (8.412727272727277,0.);
-\foreach \x in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-\draw[->,color=black] (0.,-5.101818181818178) -- (0.,5.698181818181817);
-\foreach \y in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-\clip(-5.907272727272731,-5.101818181818178) rectangle (8.412727272727277,5.698181818181817);
-\draw[line width=2.pt,dash pattern=on 5pt off 5pt,color=aqaqaq,smooth,samples=100,domain=-5.907272727272731:8.412727272727277] plot(\x,{2.0^((\x))});
-\draw [line width=2.pt,dash pattern=on 5pt off 5pt,color=aqaqaq,domain=-5.907272727272731:8.412727272727277] plot(\x,{(-0.--1.*\x)/1.});
-\draw[line width=2.pt,color=ccqqqq,smooth,samples=4001,domain=0.01:100] plot(\x,{log2(\x)});
-\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-5.101818181818178) -- (0.,5.698181818181817);
-\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-1.)-- (0.4927272727272728,-1.0211387670581502)-- (0.4927272727272728,0.);
-\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,1.)-- (2.,1.)-- (2.,0.);
-\begin{scriptsize}
-\draw[color=aqaqaq] (-3.7072727272727297,0.5881818181818196) node {eksponentna};
-\draw [color=black] (0.,0.) circle (1.0pt);
-\draw[color=black] (-0.16727272727272757,-0.25181818181818) node {0};
-\draw[color=aqaqaq] (-3.107272727272729,-3.9118181818181785) node {y = x};
-\draw [fill=qqwuqq] (1.000000000020259,2.922742273521049E-11) circle (2.0pt);
-\draw[color=qqwuqq] (1.2527272727272731,-0.31181818181818) node {T(1, 0)};
-\draw[color=aqaqaq] (0.6327272727272728,5.408181818181817) node[below] {asimptota};
-\draw [fill=uuuuuu] (0.,-1.) circle (1.0pt);
-\draw[color=uuuuuu] (-0.3672727272727277,-0.9318181818181797) node {-1};
-\draw [fill=uuuuuu] (0.4927272727272728,0.) circle (1.0pt);
-\draw[color=uuuuuu] (0.4127272727272727,0.3481818181818197) node {1/a};
-\draw [fill=uuuuuu] (0.,1.) circle (1.0pt);
-\draw[color=uuuuuu] (-0.4072727272727277,1.1281818181818193) node {1};
-\draw [fill=uuuuuu] (2.,0.) circle (1.5pt);
-\draw[color=uuuuuu] (1.9727272727272736,-0.33181818181818) node {a};
-\end{scriptsize}
+\begin{tikzpicture}[>=latex, scale=0.7]
+\koordinate{-5}{5}{-5}{5}
+\foreach \x in {-4,...,-1,1,2,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\foreach \y in {-4,...,-1,1,2,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[line width=2.pt,color=blue,smooth,samples=20,domain=-5:2.4] plot(\x,{2.0^((\x))});
+\draw[line width=1.pt,color=gray,dash pattern=on 1pt off 1pt,samples=50,domain=-5:5] plot(\x,{0.0(\x)});
+\draw[line width=2.pt,color=red,smooth,samples=4001,domain=0.03:5] plot(\x,{log2(\x)});
+\draw[color=blue] (-4.36223082314358,0.2813862402325262) node {$eksponentna$};
+\draw[color=gray] (-4,-4) node[right] {$y=x$};
+\draw[color=red] (1,-4) node {$\log_a{x}$};
 \end{tikzpicture}
 \caption{Graf logaritma $a>1$}
 \label{fig: graf osnove več od 1}
@@ -455,69 +343,57 @@ Gaf logaritemske funkcije dobimo tako, da čez simetralo lihih kvadrantov $y=x$ 
 %
 \begin{figure}[h!]
 \centering
-\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
-\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\draw[->,color=black] (-5.006149047230808,0.) -- (7.034935859421989,0.);
-\foreach \x in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-\draw[->,color=black] (0.,-4.164698738644652) -- (0.,5.336995356688894);
-\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-\clip(-5.006149047230808,-4.164698738644652) rectangle (7.034935859421989,5.336995356688894);
-\draw[line width=2.pt,dash pattern=on 4pt off 4pt,color=aqaqaq,smooth,samples=100,domain=-5.006149047230808:7.034935859421989] plot(\x,{(1.0/2.0)^((\x))});
-\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-4.164698738644652) -- (0.,5.336995356688894);
-\draw [line width=2.pt,dash pattern=on 4pt off 4pt,color=aqaqaq,domain=-5.006149047230808:7.034935859421989] plot(\x,{(-0.--1.*\x)/1.});
-\draw[line width=2.pt,color=qqwuqq,smooth,samples=4001,domain=0.01:100] plot(\x,{ln((\x))/ln(0.5)});
-\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,1.)-- (0.4996206865294056,1.0010948826822181)-- (0.5098786753699146,0.);
-\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=aqaqaq] (0.,-1.)-- (2.000001852694624,-1.0000013364360543)-- (2.,0.);
-\begin{scriptsize}
-\draw[color=aqaqaq] (-1.3231915129333742,4.2859230010104055) node {eksponentna};
-\draw [color=black] (0.,0.) circle (1.0pt);
-\draw[color=black] (-0.16280763226431988,-0.25470957552067003) node {0};
-\draw[color=aqaqaq] (0.6275987792059056,5.093146570171485) node {asimptota};
-\draw[color=aqaqaq] (-2.6517469705109873,-3.096809225275306) node {y=x};
-\draw [fill=qqwuqq] (1.,0.) circle (2.0pt);
-\draw[color=qqwuqq] (1.4852738214395544,0.6029654667129775) node {$T = (1, 0)$};
-\draw [fill=black] (0.,1.) circle (1.0pt);
-\draw[color=black] (-0.31416205148202264,1.0065772512935174) node {1};
-\draw [fill=black] (0.5098786753699146,0.) circle (1.0pt);
-\draw[color=black] (0.47624435998820286,-0.20425810244810255) node {a};
-\draw [fill=black] (0.,-1.) circle (1.0pt);
-\draw[color=black] (-0.2468934207185992,-0.9442130408457592) node {-1};
-\draw [fill=aqaqaq] (2.,0.) circle (1.0pt);
-\draw[color=black] (2.157960129073789,-0.2715267332115259) node[right] {1/a};
-\end{scriptsize}
+\begin{tikzpicture}[>=latex, scale=0.7]
+\koordinate{-5}{5}{-5}{5}
+\foreach \x in {-4,...,-1,1,2,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\foreach \y in {-4,...,-1,1,2,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[line width=2.pt,color=blue,smooth,samples=50,domain=-2.3:5] plot(\x,{0.5^((\x))});
+\draw[line width=1.pt,color=gray,dash pattern=on 1pt off 1pt,samples=50,domain=-5:5] plot(\x,{0.0(\x)});
+\draw[line width=2.pt,color=red,smooth,samples=4001,domain=0.03:5] plot(\x,{ln((\x))/ln(0.5)});
+\draw[color=blue] (-4,4) node {$eksponentna$};
+\draw[color=gray] (-4,-4) node[right] {$y=x$};
+\draw[color=red] (4,-2.5) node {$\log_a{x}$};
 \end{tikzpicture}
 \end{figure}
 \end{itemize}
 \end{enumerate}
 
 \begin{zgled}
-Nariši graf funkcije: $f(x) = \log_2{(2x-3)}+1$.
+Nariši graf funkcije: $f(x) = \log_2{(2x)}+1$.
 \begin{align*}
-\intertext{Tako kot pri eksponentni funkciji najprej določimo osnovno funkcijo. Osnovna funkcija bo sedaj vsebovala le logaritem brez premikov po $y$-osi in brez zrcaljenja: $y' = \log_2{(2x-3)}$. Nato funkcijo $y'$ narišemo v treh korakih:}
+\intertext{Tako kot pri eksponentni funkciji najprej določimo osnovno funkcijo. Osnovna funkcija bo sedaj vsebovala le logaritem brez premikov po $y$-osi in brez zrcaljenja: $y' = \log_2{(2x)}$. Nato funkcijo $y'$ narišemo v treh korakih:}
 \intertext{1) Poiščemo definicijsko območje tako, da upoštevamo pogoj: argument je večji od 0. Torej:}
-2x-3&>0
+2x&>0
 \intertext{Iz tega sledi:}
-x&>\frac{3}{2}
-\intertext{Narišemo navpično asimptoto pri $x=\frac{3}{2}$. Ker smo izračunali, da je ta logaritem definiran le za tiste $x$, ki so večji od $\frac{3}{2}$, bo naš graf na desni strani narisane asimptote.} 
+x&>0
+\intertext{Narišemo navpično asimptoto pri $x=0$. Ker smo izračunali, da je ta logaritem definiran le za tiste $x$, ki so večji od $0$, bo naš graf na desni strani narisane asimptote.} 
 \intertext{2) Poiščemo ničlo. Logaritemske funkcije imajo ničlo, ko je argument enak 1. Torej:}
-2x-3=1 \Rightarrow x=2
+2x=1 \Rightarrow x=\frac{1}{2}
 \intertext{Narišemo ničlo.}
 \intertext{3) Izračunamo točko, kjer ima logaritem vrednost 1. To bo takrat, ko bo argument enak osnovi logaritma:}
-2x-3 = 2 \Rightarrow x=\frac{5}{2}
-\intertext{Narišemo torej točko $T(\frac{5}{2}, 1)$. Čez dobljeni točki narišemo graf logaritemske funkcije. Tako smo dobili graf $y'$. Graf $y'$ je potrebno še premakniti v smeri $y$-osi. Logaritmu je prišteta enka, zato narisan graf prestavimo za eno enoto v desno (če bi enko odšteli, bi s prestavili za eno enoto v levo) in dobimo željeno funkcijo $f(x)$.}
+2x = 2 \Rightarrow x=1
+\intertext{Narišemo torej točko $T(1, 1)$. Čez dobljeni točki narišemo graf logaritemske funkcije. Tako smo dobili graf $y'$. Graf $y'$ je potrebno še premakniti v smeri $y$-osi. Logaritmu je prišteta enka, zato narisan graf prestavimo za eno enoto v desno (če bi enko odšteli, bi s prestavili za eno enoto v levo) in dobimo željeno funkcijo $f(x)$.}
 \end{align*}
-\begin{figure}[hb]
+
+\begin{figure}[h!]
 \centering
-\includegraphics[width=11cm]{zgled_logaritem.pdf}
+\begin{tikzpicture}[>=latex, scale=0.7]
+\koordinate{-5}{5}{-5}{5}
+\foreach \x in {-4,...,-1,1,2,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\foreach \y in {-4,...,-1,1,2,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[line width=2.pt,color=blue,smooth,samples=4001,domain=0.01:5] plot(\x,{ln(2.0*(\x))/ln(2.0)}););
+\draw[line width=2.pt,color=red,smooth,samples=4001,domain=0.01:5] plot(\x,{ln(2.0*(\x))/ln(2.0)+1}););
+\draw[color=blue] (4,2.5) node[right] {$y'$};
+\draw[color=red] (4,4.3) node {$f(x)$};
+\end{tikzpicture}
 \end{figure}
 %
 \end{zgled}
 
-\newpage
 Za računanje z logaritmi velja nekaj pravil:
 \begin{multicols}{2}
 \begin{itemize}
@@ -564,13 +440,6 @@ Reši logaritemsko enačbo: $\log_4{(5x+2)}=2$.
 x&=\frac{14}{5}
 \end{align*}
 \end{zgled}
-
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}[>=latex]
-\koordinate{-5}{5}{-5}{5}
-\end{tikzpicture}
-\end{figure}
 
 \section{Vaje}
 \label{sec:exp-log-vaje}
